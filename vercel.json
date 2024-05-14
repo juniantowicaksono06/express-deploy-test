@@ -2,6 +2,13 @@
 	"version": 2,
     "buildCommand": "bun run build",
     "installCommand": "bun install",
+	"builds": [
+		{
+			"src": "dist/index.js",
+			"use": "@vercel/node",
+			"config": { "includeFiles": ["dist/**"] }
+		}
+	],
 	"routes": [
 		{
 			"src": "/(.*)",
